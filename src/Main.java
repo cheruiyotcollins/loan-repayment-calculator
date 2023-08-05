@@ -4,23 +4,23 @@ public class Main {
     public static void main(String[] args) {
 
         double loanAmount = 10000.0;
-        int loanTerm = 29;
+        int loanTerm = 12;
         double interestRate = 5;
         int repaymentFrequency = 1;
-        int compoundInterestInterval=0;
+        int compoundInterestInterval = 0;
 
-        switch(repaymentFrequency){
+        switch (repaymentFrequency) {
             case 1:
-                compoundInterestInterval=12;
-                loanRepaymentCalculator(loanAmount, loanTerm, interestRate, repaymentFrequency,compoundInterestInterval);
+                compoundInterestInterval = 12;
+                loanRepaymentCalculator(loanAmount, loanTerm, interestRate, repaymentFrequency, compoundInterestInterval);
                 break;
             case 2:
-                compoundInterestInterval=26;
-                loanRepaymentCalculator(loanAmount, loanTerm, interestRate, repaymentFrequency,compoundInterestInterval);
+                compoundInterestInterval = 26;
+                loanRepaymentCalculator(loanAmount, loanTerm, interestRate, repaymentFrequency, compoundInterestInterval);
                 break;
             case 4:
-                compoundInterestInterval=52;
-                loanRepaymentCalculator(loanAmount, loanTerm, interestRate, repaymentFrequency,compoundInterestInterval);
+                compoundInterestInterval = 52;
+                loanRepaymentCalculator(loanAmount, loanTerm, interestRate, repaymentFrequency, compoundInterestInterval);
                 break;
             default:
                 System.out.println("Invalid repayment frequency");
@@ -34,6 +34,7 @@ public class Main {
 
         double totalPayments = 0.0;
         int count = 0;
+        double principleAmount=loanAmount;
         int repaymentTimes = repaymentFrequency * loanTerm;
         double totalInterest = loanAmount * interestRate / 100;
         double monthlyRepayment = (totalInterest + loanAmount) / repaymentTimes;
@@ -63,7 +64,7 @@ public class Main {
             loanAmount -= monthlyRepayment;
             if (loanAmount < 0 && totalInterest == 0) {
                 totalPayments += loanAmount;
-
+                 break;
             }
 
             if (count == compoundInterestInterval) {
@@ -73,6 +74,14 @@ public class Main {
             count++;
 
         }
+        System.out.println("");
+        System.out.println("");
+        System.out.println("                  REPAYMENT SUMMARY TABLE                          ");
+        System.out.println(" __________________________________________________________");
+        System.out.printf("%5s %20s", "TOTAL AMOUNT REPAID", "TOTAL INTEREST");
+        System.out.println();
+        System.out.println(" __________________________________________________________");
+        System.out.format("%7s %25s", Math.floor(totalPayments * 100) / 100, Math.floor((totalPayments-principleAmount) * 100) / 100);
 
     }
 
