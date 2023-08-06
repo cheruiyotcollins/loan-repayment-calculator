@@ -26,5 +26,5 @@ JDK 8+
 Clone the repository with the command `git clone https://github.com/cheruiyotcollins/loan-repayment-calculator.git` for https or `git@github.com:cheruiyotcollins/loan-repayment-calculator.git` for ssh
 Navigate to the project directory and :
 1. Open the project using your favourite IDE and locate the main class and run.
-2. Go the console and follow the prompts to enter required values for loan repayment calculation.
+2. Go to the console and follow the prompts to enter required values for loan repayment calculation.
 
