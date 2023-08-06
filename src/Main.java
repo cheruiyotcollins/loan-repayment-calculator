@@ -29,6 +29,7 @@ public class Main {
         int loanTerm = Integer.parseInt(input[1]);
         double interestRate = Double.parseDouble(input[2]);
         int repaymentFrequency = Integer.parseInt(input[3]);;
+
         int compoundInterestInterval = 0;
 
         switch (repaymentFrequency) {
