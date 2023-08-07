@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ac70e2-bde1-4051-abc9-b32d29017b12" name="Changes" comment="Added test Class">
+    <list default="true" id="14ac70e2-bde1-4051-abc9-b32d29017b12" name="Changes" comment="added try and catch in thread">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoanRepaymentCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoanRepaymentCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/LoanRepaymentCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/LoanRepaymentCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +72,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoanRepaymentCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan-repayment-calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoanRepaymentCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanRepaymentCalculatorTest.loanRepaymentCalculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan-repayment-calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoanRepaymentCalculatorTest" />
+      <option name="METHOD_NAME" value="loanRepaymentCalculator" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.LoanRepaymentCalculatorTest.loanRepaymentCalculator" />
+        <item itemvalue="JUnit.LoanRepaymentCalculatorTest" />
         <item itemvalue="Application.Tisi" />
       </list>
     </recent_temporary>
@@ -157,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691407175984</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added try and catch in thread">
+      <created>1691408985514</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1691408985514</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -168,7 +209,8 @@
     <MESSAGE value="Added README.md" />
     <MESSAGE value="added multithreading" />
     <MESSAGE value="Added test Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test Class" />
+    <MESSAGE value="added try and catch in thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="added try and catch in thread" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/loan_repayment_calculator$Main.ic" NAME="Main Coverage Results" MODIFIED="1691298539389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -20,7 +20,46 @@ public class LoanRepaymentCalculator extends Thread{
             double totalPayments = 0.0;
             int count = 0;
             double principleAmount = loanAmount;
-            int repaymentTimes = repaymentFrequency * loanTerm;
+            int repaymentTimes=0;
+            //calculating total repayments for weekly payments
+            if(repaymentFrequency==4){
+                if(loanTerm>12){
+                    if(loanTerm%12==0){
+                        int temp=loanTerm/12;
+                        repaymentTimes=temp*52;
+                    }else if(loanTerm%12!=0){
+                        int temp= loanTerm/12;
+                        repaymentTimes=temp*52;
+                        temp=loanTerm%12;
+                        repaymentTimes+=temp*repaymentFrequency;
+                    }
+                } else{
+                    repaymentTimes = repaymentFrequency * loanTerm;
+                }
+
+            } //calculating total repayment  for Bi weekly payments
+            else if (repaymentFrequency==2) {
+                if(loanTerm>12){
+                    if(loanTerm%12==0){
+                        int temp=loanTerm/12;
+                        repaymentTimes=temp*26;
+                    }else if(loanTerm%12!=0){
+                        int temp= loanTerm/12;
+                        repaymentTimes=temp*26;
+                        temp=loanTerm%12;
+                        repaymentTimes+=temp*repaymentFrequency;
+                    }
+                } else{
+                    repaymentTimes = repaymentFrequency * loanTerm;
+                }
+            }
+            //calculating total repayments for monthly repayments
+            else{
+                repaymentTimes = repaymentFrequency * loanTerm;
+            }
+            System.out.println(repaymentTimes);
+
+
             double totalInterest = loanAmount * interestRate / 100;
             double monthlyRepayment = (totalInterest + loanAmount) / repaymentTimes;
             System.out.println();
@@ -29,6 +68,7 @@ public class LoanRepaymentCalculator extends Thread{
             System.out.printf("%5s %10s %10s %8s", "PRINCIPAL AMOUNT", "INTEREST", "REPAYMENT", " OUTSTANDING AMOUNT");
 
             while (totalInterest + loanAmount > 0) {
+
                 System.out.println();
                 System.out.println(" __________________________________________________________");
                 System.out.format("%7s %18s %7s %14s", Math.floor(loanAmount * 100) / 100, Math.floor(totalInterest * 100) / 100, Math.floor(monthlyRepayment * 100) / 100, Math.floor((loanAmount + totalInterest) * 100) / 100);
